@@ -1,7 +1,20 @@
 html {
-    overflow: hidden;
     min-width: 320px;
     color: #222;
+}
+
+h1{
+    font-size: 18px;
+    border-bottom: 1px solid rgba(0,0,0,0.25);
+}
+
+h3 {
+    font-size: 16px;
+    color: #c20000;
+}
+
+h5 {
+    font-size: 14px;
 }
 
 a {
@@ -83,7 +96,7 @@ header {
     font-size: 14px;
     font-weight: 600;
     text-align: center;
-    outline: ;
+    outline: none;
 }
 
 #tabs > a.active {
@@ -156,10 +169,13 @@ header {
     display: inline-block;
     flex-grow: 0 1 30%;
     background: #eee;
-    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, .025);
+    border-radius: 4px;
     padding: 10px;
-    margin: 10px;
     max-width: 30%;
+    height: 50vh;
+    overflow: auto;
+    margin: 5px;
 }
 
 ul {
@@ -167,6 +183,24 @@ ul {
     padding-left: 0;
 }
 
+ul.bullet {
+    list-style: disc;
+    padding-left: 15px;
+}
+
+li {
+    padding-bottom: 15px;
+}
+
+li:last-child {
+    padding-bottom: 0;
+}
+
 .red {
     color: #C20000;
+    font-size: 12px;
+}
+
+.bold {
+    font-weight: bold;
 }
