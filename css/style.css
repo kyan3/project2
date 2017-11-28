@@ -1,172 +1,196 @@
 html {
-    overflow: hidden;
-    min-width: 320px;
-    color: #222;
+	min-width: 320px;
+	color: #222;
+}
+
+h3 {
+	font-size: 18px;
+	color: #c20000;
+}
+
+h5 {
+	font-size: 14px;
 }
 
 a {
-    color: #666;
+	color: #666;
 }
 
 a:hover {
-    color: #C20000;
+	color: #C20000;
 }
 
 header {
-    width: 100%;
-    padding: 10px 20px;
+	width: 100%;
+	padding: 10px 20px;
 }
 
 #logo {
-    width: 125px;
-    margin: 10px 0px;
-    display: inline-block;
+	width: 125px;
+	margin: 10px 0px;
+	display: inline-block;
 }
 
 .topLine {
-    background: #c20000;
-    border-top: 4px solid black;
-    height: 10px;
-    width: 100%;
+	background: #c20000;
+	border-top: 4px solid black;
+	height: 10px;
+	width: 100%;
 }
 
 #nav {
-    height: 80px;
-    padding-top: 10px;
-    text-align: right;
-    float: right;
-    display: inline-block
+	height: 80px;
+	padding-top: 10px;
+	text-align: right;
+	float: right;
+	display: inline-block
 }
 
 #nav > .navItem {
-    text-rendering: optimizeLegibility;
-    font-size: 12px;
-    display: inline-block;
-    text-align: center;
-    padding-bottom: 5px;
+	text-rendering: optimizeLegibility;
+	font-size: 12px;
+	display: inline-block;
+	text-align: center;
+	padding-bottom: 5px;
 }
 
 .navItem > a {
-    color: #222;
-    text-decoration: none;
+	color: #222;
+	text-decoration: none;
 }
 
 .navItem > a:hover {
-    color: #C20000;
+	color: #C20000;
 }
 
 .icon {
-    width: 100%;
+	width: 100%;
 }
 
 .hide {
-    display: none;
+	display: none;
 }
 
 .tab-content {
-    padding: 25px;
+	padding: 25px;
 }
 
 #tabs {
-    position: relative;
-    display: block;
-    padding: 0;
-    border-bottom: 1px solid #e0e0e0;
+	position: relative;
+	display: block;
+	padding: 0;
+	border-bottom: 1px solid #e0e0e0;
 }
 
 #tabs > a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    padding: 0px 22px 10px 22px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    outline: ;
+	position: relative;
+	display: inline-block;
+	text-decoration: none;
+	padding: 0px 22px 10px 22px;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	text-align: center;
+	outline: none;
 }
 
 #tabs > a.active {
-    font-weight: 700;
-    outline: none;
+	font-weight: 700;
+	outline: none;
 }
 
 #tabs > a.active:hover {
-    color: #222;
+	color: #222;
 }
 
 #tabs > a:not(.active):hover {
-    background-color: inherit;
-    color: #C20000;
+	background-color: inherit;
+	color: #C20000;
 }
 
 @media only screen and (max-width: 520px) {
-    #tabs > a {
-        font-size: 11px;
-    }
+	#tabs > a {
+		font-size: 11px;
+	}
 }
 
 .yellow-bar {
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
-    height: 3px;
-    background: #C20000;
-    display: block;
-    left: 0;
-    transition: left .2s ease;
-    -webkit-transition: left .2s ease;
+	position: absolute;
+	z-index: 10;
+	bottom: 0;
+	height: 3px;
+	background: #C20000;
+	display: block;
+	left: 0;
+	transition: left .2s ease;
+	-webkit-transition: left .2s ease;
 }
 
 #welcome-tab.active ~ span.yellow-bar {
-    left: 0;
-    width: 115px;
+	left: 0;
+	width: 115px;
 }
 
 #academics-tab.active ~ span.yellow-bar {
-    left: 115px;
-    width: 122px;
+	left: 115px;
+	width: 122px;
 }
 
 #student-life-tab.active ~ span.yellow-bar {
-    left: 237px;
-    width: 138px;
+	left: 237px;
+	width: 138px;
 }
 
 #finances-tab.active ~ span.yellow-bar {
-    left: 375px;
-    width: 114px;
+	left: 375px;
+	width: 114px;
 }
 
 #athletics-tab.active ~ span.yellow-bar {
-    left: 489px;
-    width: 115px;
+	left: 489px;
+	width: 115px;
 }
 
 .flexbox {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: flex-start;
-    align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: flex-start;
+	align-items: flex-start;
 }
 
 .flexitem {
-    display: inline-block;
-    flex-grow: 0 1 30%;
-    background: #eee;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    max-width: 30%;
+	display: inline-block;
+	flex-grow: 0 1 30%;
+	background: #eee;
+	border: 1px solid rgba(0,0,0,.025);
+	border-radius: 4px;
+	padding: 10px;
+	max-width: 33%;
+	height: 40vh;
+	overflow: auto;
+	margin: 5px;
 }
 
 ul {
-    list-style: none;
-    padding-left: 0;
+	list-style: none;
+	padding-left: 0;
+}
+
+li {
+	padding-bottom: 15px;
+}
+
+li:last-child {
+	padding-bottom: 0;
 }
 
 .red {
-    color: #C20000;
+	color: #C20000;
+	font-size: 12px;
+}
+
+.bold {
+	font-weight: bold;
 }
