@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en" >
 <head>
   <title>Illinois Institute of Technology </title>
@@ -25,10 +26,10 @@
 
 			<form method="get" action="#null" name="myForm" autocomplete="on" onsubmit="return(validate());" >
 					Username:  
-						<input type= "text" name= "user" placeholder= "Johndoe@hawk.iit.edu">
+						<input type= "text" id="username" name= "user" placeholder= "Johndoe@hawk.iit.edu" required>
 						<div class="line"><a href="https://myuid.iit.edu/" onmouseover="window.status=''; return true;">Forget Username?</a></div>
 					Password:
-						<input type= "password" name= "passwd">
+						<input type= "password" id="password" name= "passwd" required>
 						<div class="line"><a href="https://my.iit.edu/cp/myqa/answer/start" onmouseover="window.status=''; return true;">Forget Password?</a></div>
 					<div class="line">
 					<input type="submit" value="Login">
