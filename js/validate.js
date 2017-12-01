@@ -1,15 +1,24 @@
-function validate() {
+function validate()
+      {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+		
+		if ( username == "john" && password == "securepass")
+		{
+			var connect = true;
+		}
+		else
+		{	
+			alert( "Enter a valid login" );		
+			location.reload();
+		}
 
-	if (document.myForm.user.value == "") {
-		alert("Please provide your Email!");
-		document.myForm.user.focus();
-		return false;
-	}
-
-	if (document.myForm.password.value == "") {
-		alert("Please enter your Password!");
-		document.myForm.password.focus();
-		return false;
-	}
-	return (true);
-}
+		 if ( connect )
+		 {
+			alert( "Welcome to MyIIT" );
+			window.location = 'dashboard.html' ;
+		 }
+		 
+         return( false );
+      }
+	 
