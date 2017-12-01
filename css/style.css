@@ -1,206 +1,228 @@
 html {
-    min-width: 320px;
-    color: #222;
+	min-width: 320px;
+	color: #222;
 }
 
-h1{
-    font-size: 18px;
-    border-bottom: 1px solid rgba(0,0,0,0.25);
+h1 {
+	font-size: 18px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
 }
 
 h3 {
-    font-size: 16px;
-    color: #c20000;
+	font-size: 16px;
+	color: #c20000;
 }
 
 h5 {
-    font-size: 14px;
+	font-size: 14px;
 }
 
 a {
-    color: #666;
+	color: #666;
 }
 
 a:hover {
-    color: #C20000;
+	color: #C20000;
+	text-decoration: none;
 }
 
 header {
-    width: 100%;
-    padding: 10px 20px;
+	width: 100%;
+	padding: 10px 20px;
 }
 
 #logo {
-    width: 125px;
-    margin: 10px 0px;
-    display: inline-block;
+	width: 125px;
+	display: block;
+	margin: 0 auto;
+}
+
+@media only screen and (min-width: 1020px) {
+	#logo {
+		display: inline-block;
+		margin: 10px 0px;
+	}
 }
 
 .topLine {
-    background: #c20000;
-    border-top: 4px solid black;
-    height: 10px;
-    width: 100%;
+	background: #c20000;
+	border-top: 4px solid black;
+	height: 10px;
+	width: 100%;
 }
 
-#nav {
-    height: 80px;
-    padding-top: 10px;
-    text-align: right;
-    float: right;
-    display: inline-block
+.nav {
+	padding-top: 10px;
+	float: right;
+	display: block;
 }
 
-#nav > .navItem {
-    text-rendering: optimizeLegibility;
-    font-size: 12px;
-    display: inline-block;
-    text-align: center;
-    padding-bottom: 5px;
+.nav > .navItem {
+	text-rendering: optimizeLegibility;
+	font-size: 12px;
+	display: inline-block;
+	text-align: center;
+	padding-bottom: 10px;
 }
 
 .navItem > a {
-    color: #222;
-    text-decoration: none;
+	color: #222;
+	text-decoration: none;
 }
 
 .navItem > a:hover {
-    color: #C20000;
+	color: #C20000;
 }
 
 .icon {
-    width: 100%;
+	width: 100%;
 }
 
-.hide {
-    display: none;
+.tabs {
+	position: relative;
+	overflow-x: auto;
+	overflow-y: hidden;
+	height: 48px;
+	width: 100%;
+	background-color: #fff;
+	margin: 0 auto;
+	white-space: nowrap;
 }
 
-.tab-content {
-    padding: 25px;
+.tabs.tabs-transparent {
+	background-color: transparent;
 }
 
-#tabs {
-    position: relative;
-    display: block;
-    padding: 0;
-    border-bottom: 1px solid #e0e0e0;
+.tabs.tabs-transparent .tab a,
+.tabs.tabs-transparent .tab.disabled a,
+.tabs.tabs-transparent .tab.disabled a:hover {
+	color: rgba(255, 255, 255, 0.7);
 }
 
-#tabs > a {
-    position: relative;
-    display: inline-block;
-    text-decoration: none;
-    padding: 0px 22px 10px 22px;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
-    outline: none;
+.tabs.tabs-transparent .tab a:hover,
+.tabs.tabs-transparent .tab a.active {
+	color: #fff;
 }
 
-#tabs > a.active {
-    font-weight: 700;
-    outline: none;
+.tabs.tabs-transparent .indicator {
+	background-color: #fff;
 }
 
-#tabs > a.active:hover {
-    color: #222;
+.tabs .tab {
+	display: inline-block;
+	text-align: center;
+	line-height: 48px;
+	height: 48px;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
 }
 
-#tabs > a:not(.active):hover {
-    background-color: inherit;
-    color: #C20000;
+.tabs .tab a {
+	color: #666;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0 24px;
+	font-size: 14px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-transition: color .28s ease;
+	transition: color .28s ease;
+	text-decoration: none;
 }
 
-@media only screen and (max-width: 520px) {
-    #tabs > a {
-        font-size: 11px;
-    }
+.tabs .tab a:hover,
+.tabs .tab a.active {
+	background-color: transparent;
+	color: #C20000;
 }
 
-.yellow-bar {
-    position: absolute;
-    z-index: 10;
-    bottom: 0;
-    height: 3px;
-    background: #C20000;
-    display: block;
-    left: 0;
-    transition: left .2s ease;
-    -webkit-transition: left .2s ease;
+.tabs .indicator {
+	position: absolute;
+	bottom: 0;
+	height: 2px;
+	background-color: #C20000;
+	will-change: left, right;
 }
 
-#welcome-tab.active ~ span.yellow-bar {
-    left: 0;
-    width: 115px;
-}
-
-#academics-tab.active ~ span.yellow-bar {
-    left: 115px;
-    width: 122px;
-}
-
-#student-life-tab.active ~ span.yellow-bar {
-    left: 237px;
-    width: 138px;
-}
-
-#finances-tab.active ~ span.yellow-bar {
-    left: 375px;
-    width: 114px;
-}
-
-#athletics-tab.active ~ span.yellow-bar {
-    left: 489px;
-    width: 115px;
+@media only screen and (max-width: 992px) {
+	.tabs {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.tabs .tab {
+		-webkit-box-flex: 1;
+		-webkit-flex-grow: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+	}
+	.tabs .tab a {
+		padding: 0 12px;
+	}
 }
 
 .flexbox {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-content: flex-start;
-    align-items: flex-start;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-content: flex-start;
+	align-items: flex-start;
 }
 
 .flexitem {
-    display: inline-block;
-    flex-grow: 0 1 30%;
-    background: #eee;
-    border: 1px solid rgba(0, 0, 0, .025);
-    border-radius: 4px;
-    padding: 10px;
-    max-width: 30%;
-    height: 50vh;
-    overflow: auto;
-    margin: 5px;
+	display: inline-block;
+	flex-grow: 0 1 30%;
+	background: #eee;
+	border: 1px solid rgba(0, 0, 0, .025);
+	border-radius: 4px;
+	padding: 10px;
+	width: 100%;
+	max-height: 50vh;
+	overflow: auto;
+	margin: 5px;
+}
+
+@media only screen and (min-width: 600px) {
+	.flexitem {
+		width: 30%;
+		height: 50vh;
+	}
+}
+
+@media only screen and (min-width: 1025px) {
+	.flexitem {
+		max-width: 30%;
+		width: auto;
+	}
 }
 
 ul {
-    list-style: none;
-    padding-left: 0;
+	list-style: none;
+	padding-left: 0;
 }
 
 ul.bullet {
-    list-style: disc;
-    padding-left: 15px;
+	list-style: disc;
+	padding-left: 15px;
 }
 
 li {
-    padding-bottom: 15px;
+	padding-bottom: 15px;
 }
 
 li:last-child {
-    padding-bottom: 0;
+	padding-bottom: 0;
 }
 
 .red {
-    color: #C20000;
-    font-size: 12px;
+	color: #C20000;
+	font-size: 12px;
 }
 
 .bold {
-    font-weight: bold;
+	font-weight: bold;
 }
