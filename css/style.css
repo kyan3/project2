@@ -30,9 +30,9 @@ input[type=submit] {
 }
 
 footer {
-	bottom: 0;
-	right: 0;
-	position: absolute;
+	float: right;
+	padding-top: 25px;
+	position: relative;
 }
 
 .container {
