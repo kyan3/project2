@@ -3,6 +3,112 @@ html {
 	color: #222;
 }
 
+.line {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	display: block;
+}
+
+input[type=text] {
+	max-width: 300px;
+	width: 50%;
+	padding: 12px 20px;
+	display: inline-block;
+}
+
+input[type=password] {
+	max-width: 300px;
+	width: 50%;
+	padding: 12px 20px;
+	display: inline-block;
+}
+
+input[type=submit] {
+	max-width: 100%;
+	padding: 12px 20px;
+	word-wrap: break-word;
+}
+
+footer {
+	float: right;
+	padding-top: 25px;
+	position: relative;
+}
+
+.container {
+	width: 90%;
+	max-width: 600px;
+	margin: 0 auto;
+	background: #EEE;
+	border: 1px solid rgba(0, 0, 0, .025);
+	border-radius: 4px;
+	padding: 10px;
+	text-align: center;
+}
+
+@media only screen and (max-width: 800px) {
+	input[type=text]/*main form fields*/
+	/*also the text inside the input box*/
+	/*shrink text down and enlarge the input boxes*/
+		{
+		font-size: 80%;
+		max-width: 600px;
+		width: 70%;
+		padding: 12px 20px;
+		display: inline-block;
+	}
+
+	input[type=password]/*password*/
+		{
+		font-size: 80%;
+		max-width: 600px;
+		width: 70%;
+		padding: 12px 20px;
+		display: inline-block;
+	}
+
+	input[type=submit]/*submit button*/
+		{
+		font-size: 80%;
+		max-width: 100%;
+		padding: 12px 20px;
+		word-wrap: break-word;
+
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	input[type=text]/*main form fields*/
+	/*also the text inside the input box*/
+	/*shrink text down and enlarge the input boxes EVEN further*/
+		{
+		font-size: 70%;
+		max-width: 400px;
+		width: 50%;
+		padding: 12px 20px;
+		display: inline-block;
+	}
+
+	input[type=password]/*main form fields*/
+	/*also the text inside the input box*/
+	/*shrink text down and enlarge the input boxes EVEN further*/
+		{
+		font-size: 70%;
+		max-width: 400px;
+		width: 50%;
+		padding: 12px 20px;
+		display: inline-block;
+	}
+	input[type=submit]/*submit button*/
+		{
+		font-size: 70%;
+		max-width: 100%;
+		padding: 12px 20px;
+		word-wrap: break-word;
+
+	}
+}
+
 h1 {
 	font-size: 18px;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.25);
