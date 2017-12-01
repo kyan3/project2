@@ -23,6 +23,7 @@ a {
 
 a:hover {
 	color: #C20000;
+	text-decoration: none;
 }
 
 header {
@@ -32,8 +33,15 @@ header {
 
 #logo {
 	width: 125px;
-	margin: 10px 0px;
-	display: inline-block;
+	display: block;
+	margin: 0 auto;
+}
+
+@media only screen and (min-width: 1020px) {
+	#logo {
+		display: inline-block;
+		margin: 10px 0px;
+	}
 }
 
 .topLine {
@@ -43,20 +51,18 @@ header {
 	width: 100%;
 }
 
-#nav {
-	height: 80px;
+.nav {
 	padding-top: 10px;
-	text-align: right;
 	float: right;
-	display: inline-block
+	display: block;
 }
 
-#nav > .navItem {
+.nav > .navItem {
 	text-rendering: optimizeLegibility;
 	font-size: 12px;
 	display: inline-block;
 	text-align: center;
-	padding-bottom: 5px;
+	padding-bottom: 10px;
 }
 
 .navItem > a {
@@ -72,88 +78,90 @@ header {
 	width: 100%;
 }
 
-.hide {
-	display: none;
-}
-
-.tab-content {
-	padding: 25px;
-}
-
-#tabs {
+.tabs {
 	position: relative;
-	display: block;
-	padding: 0;
-	border-bottom: 1px solid #e0e0e0;
+	overflow-x: auto;
+	overflow-y: hidden;
+	height: 48px;
+	width: 100%;
+	background-color: #fff;
+	margin: 0 auto;
+	white-space: nowrap;
 }
 
-#tabs > a {
-	position: relative;
+.tabs.tabs-transparent {
+	background-color: transparent;
+}
+
+.tabs.tabs-transparent .tab a,
+.tabs.tabs-transparent .tab.disabled a,
+.tabs.tabs-transparent .tab.disabled a:hover {
+	color: rgba(255, 255, 255, 0.7);
+}
+
+.tabs.tabs-transparent .tab a:hover,
+.tabs.tabs-transparent .tab a.active {
+	color: #fff;
+}
+
+.tabs.tabs-transparent .indicator {
+	background-color: #fff;
+}
+
+.tabs .tab {
 	display: inline-block;
-	text-decoration: none;
-	padding: 0px 22px 10px 22px;
-	text-transform: uppercase;
-	font-size: 14px;
-	font-weight: 600;
 	text-align: center;
-	outline: none;
+	line-height: 48px;
+	height: 48px;
+	padding: 0;
+	margin: 0;
+	text-transform: uppercase;
 }
 
-#tabs > a.active {
-	font-weight: 700;
-	outline: none;
+.tabs .tab a {
+	color: #666;
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 0 24px;
+	font-size: 14px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	-webkit-transition: color .28s ease;
+	transition: color .28s ease;
+	text-decoration: none;
 }
 
-#tabs > a.active:hover {
-	color: #222;
-}
-
-#tabs > a:not(.active):hover {
-	background-color: inherit;
+.tabs .tab a:hover,
+.tabs .tab a.active {
+	background-color: transparent;
 	color: #C20000;
 }
 
-@media only screen and (max-width: 520px) {
-	#tabs > a {
-		font-size: 11px;
-	}
-}
-
-.yellow-bar {
+.tabs .indicator {
 	position: absolute;
-	z-index: 10;
 	bottom: 0;
-	height: 3px;
-	background: #C20000;
-	display: block;
-	left: 0;
-	transition: left .2s ease;
-	-webkit-transition: left .2s ease;
+	height: 2px;
+	background-color: #C20000;
+	will-change: left, right;
 }
 
-#welcome-tab.active ~ span.yellow-bar {
-	left: 0;
-	width: 115px;
-}
-
-#academics-tab.active ~ span.yellow-bar {
-	left: 115px;
-	width: 122px;
-}
-
-#student-life-tab.active ~ span.yellow-bar {
-	left: 237px;
-	width: 138px;
-}
-
-#finances-tab.active ~ span.yellow-bar {
-	left: 375px;
-	width: 114px;
-}
-
-#athletics-tab.active ~ span.yellow-bar {
-	left: 489px;
-	width: 115px;
+@media only screen and (max-width: 992px) {
+	.tabs {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+	}
+	.tabs .tab {
+		-webkit-box-flex: 1;
+		-webkit-flex-grow: 1;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+	}
+	.tabs .tab a {
+		padding: 0 12px;
+	}
 }
 
 .flexbox {
@@ -185,7 +193,7 @@ header {
 	}
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 1025px) {
 	.flexitem {
 		max-width: 30%;
 		width: auto;
